@@ -1,0 +1,11 @@
+{
+	"name": "togos/base32",
+	"description": "RFC3548 base32 encoder/decoder",
+	"license": "MIT",
+	"require": { },
+	"autoload": {
+		"psr-0": {
+			"TOGoS_Base32": "lib/"
+		}
+	}
+}
