@@ -9,8 +9,6 @@ php:
   - hhvm
   - nightly
 
-install: make test-dependencies
-
 # Since there's only one file in here and no dependencies,
 # we can get by without composer
 # and run in PHP 5.2
