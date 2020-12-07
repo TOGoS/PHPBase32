@@ -1,6 +1,6 @@
 <?php
 
-class TOGoS_Base32Test extends PHPUnit_Framework_TestCase
+class TOGoS_Base32Test extends TOGoS_SimplerTest_TestCase
 {
 	protected $testIO = array(
 		'' => '',
