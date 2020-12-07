@@ -42,11 +42,11 @@ class TOGoS_Base32 {
 		$base32 = "";
 
 		while( $i < strlen($bytes) ) {
-			$currByte = ord($bytes{$i});
+			$currByte = ord($bytes[$i]);
 			/* Is the current digit going to span a byte boundary? */
 			if( $index > 3 ) {
 				if( ($i + 1) < strlen($bytes) ) {
-					$nextByte = ord($bytes{$i+1});
+					$nextByte = ord($bytes[$i+1]);
 				} else {
 					$nextByte = 0;
 				}
@@ -61,7 +61,7 @@ class TOGoS_Base32 {
 				$index = ($index + 5) % 8;
 				if( $index == 0 ) $i++;
 			}
-			$base32 .= self::$base32Chars{$digit};
+			$base32 .= self::$base32Chars[$digit];
 		}
 
 		return $base32;
@@ -78,7 +78,7 @@ class TOGoS_Base32 {
 		}
 
 		for( $i = 0, $index = 0, $offset = 0; $i < strlen($base32); $i++ ) {
-			$lookup = ord($base32{$i}) - ord('0');
+			$lookup = ord($base32[$i]) - ord('0');
 
 			/* Skip chars outside the lookup table */
 			if( $lookup < 0 || $lookup >= count(self::$base32Lookup) ) {
