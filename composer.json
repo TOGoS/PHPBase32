@@ -10,12 +10,12 @@
 	},
 	"autoload": {
 		"psr-0": {
-			"TOGoS_Base32": "lib/"
+			"TOGoS_Base32": "src/main/php/"
 		}
 	},
 	"autoload-dev": {
 		"psr-0": {
-			"TOGoS_Base32": "test/"
+			"TOGoS_Base32": "src/test/php/"
 		}
 	}
 }

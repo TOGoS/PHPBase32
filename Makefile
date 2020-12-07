@@ -11,7 +11,7 @@ composer.lock: | composer.json
 vendor: composer.lock
 	composer install
 
-test-dependencies: vendor vendor/bin/phpunit
+test-dependencies: vendor vendor/bin/phpsimplertest
 
 run-unit-tests: test-dependencies
-	vendor/bin/phpunit test
+	vendor/bin/phpsimplertest --bootstrap vendor/autoload.php src/test/php

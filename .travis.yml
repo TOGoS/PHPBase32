@@ -9,7 +9,4 @@ php:
   - hhvm
   - nightly
 
-# Since there's only one file in here and no dependencies,
-# we can get by without composer
-# and run in PHP 5.2
-script: phpunit --bootstrap lib/TOGoS/Base32.php test
+script: phpunit --bootstrap src/travis/php/bootstrap.php src/test/php
